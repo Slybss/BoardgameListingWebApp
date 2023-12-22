@@ -1,5 +1,4 @@
 
-
 name: Build maven App on self hosted VM
 
 on:
@@ -19,6 +18,7 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+        
     - name: compile with Maven
       run: mvn compile
     - name: test with Maven
