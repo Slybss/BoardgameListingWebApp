@@ -3,23 +3,23 @@ pipeline {
     
     tools {
         jdk 'jdk11'
-        maven 'maven3'
+        maven 'maven2'
     }
-
+    
     stages {
-        stage('Git Checkout') {
+        stage('Checkout') {
             steps {
-                git 'https://github.com/jaiswaladi2468/BoardgameListingWebApp.git'
+                git 'https://github.com/Slybss/BoardgameListingWebApp.git'
             }
         }
         
-        stage('Compile') {
+        stage('compile') {
             steps {
-               sh "mvn compile"
+                sh "mvn compile"
             }
         }
         
-        stage('Test') {
+        stage('test') {
             steps {
                 sh "mvn test"
             }
@@ -30,8 +30,8 @@ pipeline {
                 sh "mvn package"
             }
         }
-        
-        stage('Install') {
+    
+        stage('install') {
             steps {
                 sh "mvn install"
             }
