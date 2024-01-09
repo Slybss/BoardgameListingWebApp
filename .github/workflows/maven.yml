@@ -1,5 +1,5 @@
 
-name: Build maven App on self hosted vm
+name: Build maven App on my self hosted vm
 
 on:
   push:
