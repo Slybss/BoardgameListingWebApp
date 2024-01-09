@@ -23,5 +23,5 @@ jobs:
     - name: test with Maven
       run: mvn test 
     - name: Build with Maven
-      run: mvn package --file pom.xml
+      run: mvn install --file pom.xml
 
